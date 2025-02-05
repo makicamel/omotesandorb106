@@ -1,0 +1,819 @@
+= Rails アプリ地図考\nFlush Cut
+
+: author
+   @makicamel
+
+: content-source
+   Omotesando.rb #106 スポンサー LT
+
+:date
+   2025.02.06
+
+:theme
+   theme
+
+= 自己紹介
+
+  * @makicamel / 川原万季
+  * Ruby 💎 とビール 🍻 とお酒が好き
+  * 好きな言葉は「エイってやってバーン」
+  * ㈱アンドパッド ⛑️
+
+  # image
+  # src = image/makicamel.png
+  # relative_width = 10
+  # align = right
+  # vertical_align = top
+  # relative_margin_right = 0
+  # relative_margin_top = 0
+
+= 　　
+　
+== プロパティ
+　
+: background-image
+   image/andpad-background.png
+: background-image-relative-width
+   100
+: background-image-align
+   center
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   0
+
+= We're hiring!
+　
+   # image
+   # src = image/andpad-logo.png
+   # relative_width = 20
+   # align = left
+   # vertical_align = top
+   # relative_margin_left = -24
+   # relative_margin_top = -4
+
+= 東京 Ruby 会議 12
+
+(('tag:xx-small:　　'))((<URL:https://regional.rubykaigi.org/tokyo12>))
+
+== プロパティ
+
+: background-image
+   image/tokyorubykaigi.png
+: background-image-relative-width
+   78
+: background-image-align
+   center
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   24
+
+= 東京 Ruby 会議 12
+
+   * 楽しかったですね!
+
+== プロパティ
+
+: background-image
+   image/tokyorubykaigi-photos.png
+: background-image-relative-width
+   72
+: background-image-align
+   center
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   24
+
+= 東京 Ruby 会議 12
+
+* 前夜祭でトークもさせてもらいました
+   * ((<URL:https://regional.rubykaigi.org/tokyo12/talks>))
+
+== プロパティ
+
+: background-image
+   image/tokyorubykaigi-makicamel.png
+: background-image-relative-width
+   52
+: background-image-align
+   center
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   32
+
+= 東京 Ruby 会議 12
+
+   * 今日はこのトークの LT 版
+      * ((<URL:https://regional.rubykaigi.org/tokyo12/talks>))
+
+== プロパティ
+
+: background-image
+   image/tokyorubykaigi-makicamel.png
+: background-image-relative-width
+   52
+: background-image-align
+   center
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   32
+
+= 東京 Ruby 会議 12
+
+* 気になった方は元資料を見たり懇親会で声をかけてもらえると嬉しいです
+(('tag:xx-small:　　'))((<URL:https://speakerdeck.com/makicamel/thinking-about-a-map-for-rails-applications>))
+
+== プロパティ
+
+: background-image
+   image/tokyorubykaigi-title.png
+: background-image-relative-width
+   56
+: background-image-align
+   center
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   36
+
+= 「地図」
+
+
+= 地図
+
+* 株式会社アンドパッド 秋葉原オフィスに初めて来た人 🖐
+  * (('wait'))地図を見てきましたね
+
+= 地図
+
+* (('wait'))道しるべ((-もちろんそれ以外のたくさんの役割があります-))
+
+= Rails アプリの地図
+
+* (('wait'))アプリを歩くための道しるべがほしい
+
+= Rails アプリの地図
+
+* 道しるべがないと
+  * 🧒　新しいメンバー
+    * オンボーディングで教わる以外のアプリの知識の獲得は手探り
+  * 🧑　慣れたメンバー
+    * 普段触るサービスにアプリの知識が閉じがち
+    * いつの間にか知らないドメインが増えている
+
+= Rails アプリの地図
+
+  * といえば
+  * ER 図
+
+= Rails アプリの地図
+   * 全 ER 図
+
+= Rails アプリの地図
+   * 全 ER 図
+
+  # image
+  # src = image/makicamel-madahayai.png
+  # relative_width = 28
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_right = -4
+  # relative_margin_top = 30
+
+== プロパティ
+
+: background-image
+   image/erd.png
+: background-image-relative-width
+   100
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+
+= Rails アプリの地図
+
+  * 主要 ER 図の手動メンテ
+
+= Rails アプリの地図
+
+  * 主要 ER 図の手動メンテ
+
+  # image
+  # src = image/makicamel-madahayai.png
+  # relative_width = 28
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_right = -4
+  # relative_margin_top = 30
+
+== プロパティ
+
+: background-image
+   image/document-is-hard.png
+: background-image-relative-width
+   80
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   6
+
+= つくった 🗺️
+
+  # image
+  # src = image/erd_map-released.png
+  # relative_width = 60
+  # align = center
+  # vertical_align = bottom
+  # relative_margin_top = 0
+
+(('tag:xx-small:　　'))((<URL:https://github.com/makicamel/erd_map>))
+
+= 地図
+
+((<URL:https://www.google.com/maps>))
+
+== プロパティ
+
+: background-image
+   image/google-maps-1.png
+: background-image-relative-width
+   92
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   10
+
+= 地図
+
+((<URL:https://www.google.com/maps>))
+
+* (('wait'))ズームインすると詳細が見える
+* (('wait'))ズームアウトすると全体が見通せる
+
+== プロパティ
+
+: background-image
+   image/google-maps-2.png
+: background-image-relative-width
+   92
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   10
+
+= ErdMap 🗺️
+
+((<URL:https://github.com/makicamel/erd_map>))
+
+* ズームインすると詳細が見える
+* ズームアウトすると概要が見える
+
+== プロパティ
+
+: background-image
+   image/erd-maps.png
+: background-image-relative-width
+   92
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   10
+
+= ErdMap 🗺️
+
+* 最初は 3 つの"重要"なモデルのみ表示
+  * ズームインすると次に重要なモデルを表示
+  * 重要度の高いモデルは大きく、重要度の低いモデルは小さく表示
+* モデルを"コミュニティ"ごとに色分け
+
+= ErdMap 🗺️
+
+* ErdMap づくりに必要なこと
+  * モデルの"重要"度の評価
+  * "コミュニティ"分割
+
+= ErdMap のつくり方 🗺️
+
+= ネットワーク分析
+
+= ネットワーク分析
+
+   * ネットワークとは
+   * ノード（点）とエッジ（線）で構成されるデータ構造
+   * e.g. SNS のユーザー関係
+      * ノード: ユーザー、エッジ: フォロー関係
+
+= ネットワーク分析
+
+* Rails アプリをひとつのネットワークとして捉える
+   * ノード: モデル
+   * エッジ: 関連
+
+= ErdMap に必要なこと 🗺️
+
+* モデルの"重要"度の評価 ⬅️
+* "コミュニティ"分割
+
+= 重要度の評価指標
+
+  * 次数中心性
+  * 固有ベクトル中心性
+  * 媒介中心性
+  * etc
+
+  # image
+  # src = image/fukidashi-eigenvector.png
+  # relative_width = 32
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+  # relative_margin_right = 4
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   10
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= 重要度の評価指標: 次数中心性
+
+* 直接関連している他モデルの数（次数）を評価
+* シンプルで高速
+
+= 重要度の評価指標: 固有ベクトル中心性
+
+* どれだけ重要なモデルと関連しているか((-関連する重要モデルの数ではなく相手モデルのスコアの合計-))を評価
+* 次数中心性の「数」の評価に対し「質」を評価
+  * (('wait'))e.g. 請求データ
+    * ユーザーや注文といった中核モデルと紐づくため((*固有ベクトル中心性が高い*))
+    * 紐づくモデルが少ないため((*次数中心性が低い*))
+  * (('wait'))e.g. 履歴データ
+    * 中核モデルと紐づいても関連の終端になりやすく((*固有ベクトル中心性が低い*))
+    * 多数の関連を持つため((*次数中心性が高い*))
+
+= 重要度の評価指標: 媒介中心性
+
+* 他のモデル間の最短経路にどれだけ頻繁に登場するかを評価
+  * (('wait'))e.g. 請求データ
+    * ユーザーや注文といった中核モデルと紐づくため((*固有ベクトル中心性が高い*))
+    * 他のノード間の最短経路にあまり登場しないため((*媒介中心性が低い*))
+
+= 固有ベクトル中心性のアルゴリズム
+　
+= 固有ベクトル中心性のアルゴリズム
+
+(1) 初期化
+    * すべてのノードに初期スコアを与える
+(2) スコアの更新
+    * 各ノードのスコアの「接続先ノードのスコアの合計」を算出し正規化する
+(3) 繰り返し
+    * スコアが収束するまで 2 の計算を繰り返す
+
+= 固有ベクトル中心性のアルゴリズム
+
+* 例えば「A-B」「A-C」が接続するネットワークで考えてみる
+
+== プロパティ
+
+: background-image
+   image/eigenvector-centrality-1.png
+: background-image-relative-height
+   66
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   14
+
+= 固有ベクトル中心性のアルゴリズム
+
+* 1. スコアの初期化
+* 2. スコアの更新
+    * スコアの算出 → 正規化
+
+== プロパティ
+
+: background-image
+   image/eigenvector-centrality-2.png
+: background-image-relative-height
+   66
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   14
+
+= 固有ベクトル中心性のアルゴリズム
+
+* 3. スコアの更新の繰り返し
+
+== プロパティ
+
+: background-image
+   image/eigenvector-centrality-3.png
+: background-image-relative-height
+   66
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   14
+
+= 固有ベクトル中心性のアルゴリズム
+
+* スコアの更新を繰り返すと\nスコアがほとんど変化しなくなり 最終的に収束する
+
+== プロパティ
+
+: background-image
+   image/eigenvector-centrality-4.png
+: background-image-relative-height
+   66
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   14
+
+= ErdMap に必要なこと 🗺️
+
+* モデルの"重要"度の評価
+* "コミュニティ"分割 ⬅️
+
+= コミュニティ分割
+
+* (('wait'))とは？
+
+= コミュニティ分割
+
+  * 重要なモデルとそれに関連するモデルを知りたい
+    * ひとつのモデルはひとつの概念を表す
+    * ビジネスロジックは複数のモデルから成ることが多い
+
+  # image
+  # src = image/fukidashi-architecture.png
+  # relative_width = 28
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+  # relative_margin_right = 4
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   10
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= コミュニティ分割
+
+* Mastdon の Account モデルの隣接モデル
+  * (('wait'))情報が多くて情報を読み取りづらい
+  * (('wait'))我々はもっと細かい単位で\n概念を認識しているはず
+
+== プロパティ
+
+: background-image
+   image/mastdon-account-association.png
+: background-image-relative-height
+   76
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   12
+
+= コミュニティ分割
+
+* Mastdon のモデルの Account モデルが所属するコミュニティ
+  * (('wait'))Accountにまつわる概念が抽出されていそう
+
+== プロパティ
+
+: background-image
+   image/mastdon-account-community.png
+: background-image-relative-height
+   76
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   12
+
+= コミュニティ分割
+
+* モデルのグループをいい感じに分割して可視化したい
+
+== プロパティ
+
+: background-image
+   image/mastdon-community-example.png
+: background-image-relative-height
+   76
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   12
+
+= コミュニティ検出
+
+  * アルゴリズム
+    * Louvain 法
+    * Girvan-Newman 法((-Louvain法は高速、Girvan-Newman法は計算コストが高いですが、\nRailsアプリのモデルデータくらいなら関係なさそうです-))
+    * etc
+
+  # image
+  # src = image/fukidashi-louvain.png
+  # relative_width = 32
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+  # relative_margin_right = 4
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   10
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= コミュニティ検出: Louvain 法
+
+* ネットワーク内でつながりの強いコミュニティを発見するアルゴリズム
+* モジュラリティを最大化するようノードを移動・統合し、最適化を繰り返すことで自然なまとまりに分割する
+  * モジュラリティ = つながりの密度
+
+= コミュニティ検出: Louvain 法
+
+* 6つのノード、7つのエッジを持つネットワークがあるとする
+* 初期状態ではすべてのノードは独立したコミュニティ
+
+== プロパティ
+
+: background-image
+   image/louvain-1.png
+: background-image-relative-height
+   72
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   10
+
+= コミュニティ検出: Louvain 法
+
+* 複数のノードを同じコミュニティにした場合のモジュラリティの変化を見て\nモジュラリティが高くなるノードグループをコミュニティとして確定する
+
+== プロパティ
+
+: background-image
+   image/louvain-2.png
+: background-image-relative-height
+   72
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   10
+
+= コミュニティ検出: Louvain 法
+
+* この操作を繰り返すと以下のコミュニティに分割される
+
+== プロパティ
+
+: background-image
+   image/louvain-3.png
+: background-image-relative-height
+   72
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   10
+
+= 実装
+
+* (('wait'))自分で実装しなくていい
+* (('wait'))NetworkX が提供するメソッドをコールするだけ
+
+= NetworkX
+
+* ネットワーク分析用パッケージ
+* (('wait'))Python 製
+* (('wait'))Rails から呼びたい
+
+(('tag:xx-small:　　NetworkX　'))((<URL:https://github.com/networkx/networkx>))
+
+== プロパティ
+
+: background-image
+   image/networkx.png
+: background-image-relative-width
+   10
+: background-image-align
+   right
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   20
+: background-image-relative-margin-right
+   8
+
+= PyCall.rb
+
+* Ruby - Python ブリッジライブラリ
+  * Python オブジェクトを Ruby から触れる
+  * Ruby オブジェクトを Python 側に見せられる
+* mrknさん作
+
+(('tag:xx-small:　　PyCall　'))((<URL:https://github.com/mrkn/pycall.rb>))
+
+(('tag:xx-small:　　PyCall があれば Ruby で機械学習ができる　'))((<URL:https://magazine.rubyist.net/articles/0055/0055-pycall.html>))
+
+== プロパティ
+
+: background-image
+   image/pycallrb.png
+: background-image-relative-width
+   10
+: background-image-align
+   right
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   20
+: background-image-relative-margin-right
+   8
+
+= 固有ベクトル中心性
+
+    # rouge ruby
+
+    networkx = PyCall.import_module("networkx")
+    graph = networkx.Graph.new
+    # ... graphにノードやエッジを追加 ...
+    centralities = networkx.eigenvector_centrality(graph)
+    # => {ノード名: 中心性} のハッシュが返る
+
+  * これだけのコードで\n固有ベクトル中心性が得られる
+
+  # image
+  # src = image/fukidashi-sugoi.png
+  # relative_width = 24
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+  # relative_margin_right = 4
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   10
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= Louvain 法
+
+    # rouge ruby
+      whole_communities = networkx_community
+        .louvain_communities(whole_graph)
+        .map { |communities| PyCall::List.new(communities).to_a }
+
+  * これだけのコードで\nLouvain 法でコミュニティ分割できる
+
+  # image
+  # src = image/fukidashi-sugoi2.png
+  # relative_width = 24
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+  # relative_margin_right = 4
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   10
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= ErdMap 🗺️
+
+  * デモ（Redmine の ErdMap）
+
+  # image
+  # src = image/demo-redmine.png
+  # relative_height = 90
+  # align = center
+  # vertical_align = bottom
+  # relative_margin_top = 0
+
+(('tag:xx-small:　　Redmine　'))((<URL:https://github.com/redmine/redmine>))\n
+(('tag:xx-small:　　Sample HTML　'))((<URL:https://github.com/makicamel/erd_map/blob/main/sample/redmine.html>))
+
+= ErdMap を使ってみて
+
+= ErdMap
+
+* 初見の小規模アプリ（モデル数 100）の場合
+  * 重要な概念がわかる
+  * アプリの機能や構造・データフローのイメージが湧く
+
+= ErdMap
+
+* 触り慣れている中規模アプリ（モデル数 1,400）の場合
+  * 発見が多い
+    * 最近こんなモデルが作られていたのか、とか
+    * 気になっていたあのモデルはこういうものだったのか、とか
+    * あのサービスの主要モデルの関連はこうなっているのか、とか
+
+= ErdMap
+
+  * 楽
+    * 並列に並ぶファイル名から概念や構造を見出すのは困難
+    * 重みづけされグルーピングされて可視化されているとかんたん
+      * 発見がある
+      * 最新の状態の簡易的な ER 図がいつでもそこにあるq
+  * 可視化面白い
+    * 見えるようにすると何かが見える（かも）
+      * 設計の改善点、ボトルネック...
+
+= Rails アプリの地図
+
+* ぜひ試してみてください
+
+= Special Thanks
+
+@youchan
+
+= 　　
+　
+== プロパティ
+　
+: background-image
+   image/andpad-background.png
+: background-image-relative-width
+   100
+: background-image-align
+   center
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   0
+
+= We're hiring!
