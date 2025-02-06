@@ -7,7 +7,7 @@ accent_color           = '#dd451d'
 @font_family           = find_font_family(@default_font)
 @bold_font             = 'Gen Jyuu Gothic P Bold'
 @bold_font_family      = find_font_family(@bold_font)
-@monospace_font        = 'Space Mono'
+@monospace_font        = 'Gen Jyuu Gothic'
 @monospace_font_family = find_font_family(@monospace_font)
 @preformatted_fill_color = "green"
 
